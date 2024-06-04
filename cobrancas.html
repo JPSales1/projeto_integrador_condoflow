@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobrança de Aluguel - CondoFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="avisos.html">Avisos</a></li>
+            <li><a href="registros.html">Registros</a></li>
+            <li><a href="cobrancas.html">Contábil</a></li>
+            <li><a href="reunioes.html">Reuniões</a></li>
+            <li><a href="#">Reservas</a></li>
+            <li><a href="#">Configurações</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Cobrança de Aluguel</h1>
+        <div class="form-container">
+            <form id="cobranca-form">
+                <div class="form-group">
+                    <label for="morador">Selecione um Morador:</label>
+                    <select id="morador" name="morador">
+                        <option value="morador1">Morador 1</option>
+                        <option value="morador2">Morador 2</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="valor">Valor da Cobrança:</label>
+                    <input type="text" id="valor" name="valor" placeholder="R$ 0,00">
+                </div>
+                <div class="form-group">
+                    <label for="pagamento">Forma de Pagamento:</label>
+                    <select id="pagamento" name="pagamento">
+                        <option value="pix">PIX</option>
+                        <option value="boleto">Boleto</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                </div>
+                <button type="submit">Enviar Cobrança</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
