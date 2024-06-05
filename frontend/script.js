@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Função para adicionar avisos
     const addAvisoButton = document.getElementById('addAviso');
     const avisosContainer = document.getElementById('avisosContainer');
 
@@ -11,32 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
             avisosContainer.appendChild(avisoElement);
         }
     });
+
+    // Função para fazer reservas
+    const reserveButton = document.getElementById('reserve');
+
+    reserveButton?.addEventListener('click', () => {
+        const area = document.getElementById('area').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+
+        if (area && date && time) {
+            alert(`Reserva feita para ${area} no dia ${date} às ${time}.`);
+        } else {
+            alert("Por favor, preencha todos os campos.");
+        }
+    });
+
+    // Função para adicionar moradores (apenas exemplo, expandir conforme necessário)
+    const addMoradorButton = document.getElementById('addMorador');
+    const moradoresContainer = document.getElementById('moradoresContainer');
+
+    addMoradorButton?.addEventListener('click', () => {
+        const nome = prompt("Digite o nome do morador:");
+        if (nome) {
+            const moradorElement = document.createElement('div');
+            moradorElement.classList.add('morador-card');
+            moradorElement.textContent = nome;
+            moradoresContainer.appendChild(moradorElement);
+        }
+    });
 });
-
-function mostrarDetalhes(nome) {
-    const detalhes = {
-        "Augusto Gabriel Rodrigues dos Santos": {
-            unidade: "Bloco C, Apt 305",
-            veiculo: "Moto - XYZ-5678",
-            cpf: "555.555.555-00",
-            email: "carlos@example.com",
-            telefone: "(33) 5555-5555",
-            engajamento: "Inativo"
-        },
-        // Adicione outros moradores aqui se necessário
-    };
-
-    const registroDetalhes = document.getElementById('registroDetalhes');
-    const morador = detalhes[nome];
-
-    registroDetalhes.innerHTML = `
-        <h2>${nome}</h2>
-        <p>Unidade: ${morador.unidade}</p>
-        <p>Veículo: ${morador.veiculo}</p>
-        <p>CPF: ${morador.cpf}</p>
-        <p>Email: ${morador.email}</p>
-        <p>Telefone: ${morador.telefone}</p>
-        <p>Engajamento: ${morador.engajamento}</p>
-        <button>Adicionar Veículo</button>
-    `;
-}

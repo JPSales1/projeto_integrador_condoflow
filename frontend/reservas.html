@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avisos - CondoFlow</title>
+    <title>Reservas - CondoFlow</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,14 +16,21 @@
             <li><a href="cobrancas.html">Contábil</a></li>
             <li><a href="reunioes.html">Reuniões</a></li>
             <li><a href="reservas.html">Reservas</a></li>
-           
+            
         </ul>
     </div>
     <div class="main-content">
-        <h1>Avisos</h1>
-        <button id="addAviso">+ Adicionar Aviso</button>
-        <div id="avisosContainer"></div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+        <h1>Reservas de Áreas de Lazer</h1>
+        <div class="form-group">
+            <label for="area">Área:</label>
+            <select id="area">
+                <option>Churrasqueira</option>
+                <option>Salão de Festas</option>
+                <option>Piscina</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="date">Dia:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="form-group">
